@@ -13,7 +13,7 @@ public class Cylinder{
     }
 
     public double Volume() {
-        if (footing.area() != 0 && height.a != 0) {
+        if (footing.area() != 0 && height.a > 0) {
             return footing.area() * height.a;
         }
         else {

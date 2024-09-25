@@ -10,7 +10,7 @@ public class Circle implements Figure {
     }
 
     public double area(){
-        if (radius >= 0){
+        if (radius > 0){
             return radius*radius*3.14;
         }
         else{
@@ -19,7 +19,7 @@ public class Circle implements Figure {
     }
     @Override
     public String toString() {
-        if (radius >= 0){
+        if (radius > 0){
             return "Circle: " + radius;
         }
         else {

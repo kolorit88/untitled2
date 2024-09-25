@@ -1,16 +1,12 @@
 public class Table {
-    private int rows;
-    private int cols;
+    private final int rows;
+    private final int cols;
     int[] table_arr;
 
     public Table(int rows_, int cols_){
         rows = rows_;
         cols = cols_;
         table_arr = new int[rows * cols];
-
-        for(int i = 0; i < table_arr.length; i++){
-            table_arr[i] = i;
-        }
 
     }
 
@@ -32,9 +28,16 @@ public class Table {
     }
 
     public String toString(){
-        String tmp = "";
-        for (int j : table_arr) {
-            tmp += j + ";";
+        StringBuilder tmp = new StringBuilder();
+        String separator;
+        for (int i = 0; i < table_arr.length; i++) {
+            if ((i + 1) % cols == 0) {
+                separator = "\n";
+            }
+            else {separator = ";";
+            }
+
+            tmp.append(table_arr[i]).append(separator);
         }
         return tmp.substring(0, tmp.length() - 1);
     }

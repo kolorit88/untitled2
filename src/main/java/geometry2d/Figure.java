@@ -1,6 +1,6 @@
 package geometry2d;
 
 public interface Figure {
-    public double area();
-    public String toStringFigure();
+    double area();
+    String toString();
 }

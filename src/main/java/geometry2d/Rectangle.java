@@ -12,7 +12,8 @@ public class Rectangle implements Figure {
         return a*b;
     }
 
-    public String toStringFigure() {
+    @Override
+    public String toString() {
         return "Rectangle: " + a + ";" + b;
     }
 }

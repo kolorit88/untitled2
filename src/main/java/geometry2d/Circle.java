@@ -3,7 +3,7 @@ package geometry2d;
 import Exceptions.IncorrectRadius;
 
 public class Circle implements Figure {
-    double radius = -1;
+    double radius;
 
     public Circle(double radius_) {
         radius = radius_;
@@ -17,8 +17,8 @@ public class Circle implements Figure {
             throw new IncorrectRadius("Incorrect radius");
         }
     }
-
-    public String toStringFigure() {
+    @Override
+    public String toString() {
         if (radius >= 0){
             return "Circle: " + radius;
         }

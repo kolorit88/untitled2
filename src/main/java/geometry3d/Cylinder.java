@@ -1,8 +1,6 @@
 package geometry3d;
-import Exceptions.IncorrectRadius;
 import Exceptions.ObjectNot3d;
 import geometry2d.*;
-
 
 
 public class Cylinder{
@@ -15,7 +13,7 @@ public class Cylinder{
     }
 
     public double Volume() {
-        if (footing.area() != 0 || height.a != 0) {
+        if (footing.area() != 0 && height.a != 0) {
             return footing.area() * height.a;
         }
         else {

@@ -20,7 +20,23 @@ public class Main {
         Bell bell = new Bell();
         bell.sound();
 
-        Table table1 = new Table(3, 2);
+        Table table1 = new Table(4, 3);
+
+        System.out.println(table1.getValue(1, 2));
+        table1.setValue(1, 2, 999);
+        System.out.println(table1.getValue(1, 2));
+
+        System.out.println(table1.rows());
+        System.out.println(table1.cols());
+        System.out.println(table1.toString());
+        System.out.println(table1.average());
+
+        OddEvenSeparator sep = new OddEvenSeparator();
+        for (int i = 0; i < 11; i++) {
+            sep.addNumber(i);
+        }
+        sep.even();
+        sep.odd();
     }
 }
 

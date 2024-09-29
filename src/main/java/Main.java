@@ -25,7 +25,10 @@ public class Main {
         System.out.println("---------\n");
 
         System.out.println("---Bell---");
-        Bell.sound();
+        Bell bell = new Bell();
+        bell.sound();
+        bell.sound();
+        bell.sound();
         System.out.println("---------\n");
 
         System.out.println("---Table---");

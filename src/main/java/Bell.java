@@ -1,7 +1,13 @@
 
 public class Bell {
-    public static void sound(){
-        System.out.println("bing");
-        System.out.println("bong");
+    boolean bing = true;
+    public void sound(){
+        if (bing){
+            System.out.println("bing");
+        }
+        else{
+            System.out.println("bong");
+        }
+        bing = !bing;
     }
 }
